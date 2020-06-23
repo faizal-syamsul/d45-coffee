@@ -3,8 +3,15 @@ body {
 	padding:0;
 }
 
+header {
+	width: 100%;
+	position: fixed;
+	top:0;
+	z-index: 10;
+}
+
 nav {
-	background-color:#bf8d54;
+	background-color:rgb(219, 173, 106);
 	height:32px;
 }
 
@@ -21,7 +28,7 @@ nav ul {
 }
 
 nav li {
-	color: #432818;
+	color: rgb(111, 29, 27);
 	margin:0 20px 0 0;
 }
 
@@ -36,14 +43,9 @@ nav li:hover {
 }
 
 .socials a {
-	font-size: 10px;
+	line-height: 32px;
 	margin:0 27px 0 0;
-	color: rgb(179, 81, 12);
-}
-
-.socials span {
-	height:60%;
-	margin:0 auto;
+	color: rgb(111, 29, 27);
 }
 
 .title-bar {
@@ -51,12 +53,19 @@ nav li:hover {
 	height:75px;
 }
 
+.title-bar img {
+	height: 45px;
+	margin:15px 0 15px 25px;
+	padding:0;
+	float:left;
+}
+
 .title-bar h1 {
 	font-family: 'Yeseva One', cursive;
 	line-height: 75px;
 	letter-spacing: 1px;
 	color:rgb(179, 81, 12);
-	margin:0 0 0 25px;
+	margin:0 0 0 15px;
 	float:left;
 }
 
@@ -64,9 +73,13 @@ nav li:hover {
 	cursor:pointer;
 }
 
+.menu-icon {
+	display: none;
+}
+
 .header-right {
 	font-family:'Rubik', sans-serif;
-	color: #432818;
+	color: rgb(111, 29, 27);
 	margin:0 25px 0 0;
 	float:right;
 	display: flex;
@@ -90,7 +103,7 @@ nav li:hover {
 }
 
 .signup:hover {
-	border-bottom: 1px solid #432818;
+	border-bottom: 1px solid rgb(111, 29, 27);
 	cursor:pointer;
 }
 
@@ -100,6 +113,7 @@ nav li:hover {
 	background-color: rgba(111, 29, 27,0.8);
 	margin:0 0 0 25px;
 	padding:0 25px 0 25px;
+	transition: all 0.4s;
 }
 
 .login:hover {
@@ -108,37 +122,76 @@ nav li:hover {
 }
 
 .top-wrapper {
-  padding: 200px 0 200px 0;
   background-image: url(https://images.unsplash.com/photo-1530124175301-15984e162c84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
-  background-size: cover;
+	background-size: cover;
+}
+
+.top-wrapper .container {
+	background-color: rgba(194, 198, 167, 0.7);
+	margin:0;
 }
 
 .top-wrapper h1 {
 	font-family:'Rubik', sans-serif;
-  opacity: 0.7;
+	opacity: 1;
+	font-weight: bold;
 	text-align:center;
-  font-size: 32px;
+  font-size: 28px;
+	color:rgba(111, 29, 27);
   letter-spacing: 1px;
-  margin-bottom: 10px;
+	padding:250px 0 0 0;
+  margin:0;
 }
 
+.top-wrapper h4 {
+	font-family:'Rubik', sans-serif;
+	color:rgb(111, 29, 27);
+	opacity: 1;
+	font-weight: normal;
+	margin: 12px 0 0 0;
+	padding:0;
+	text-align: center;
+}
+
+.top-wrapper span {
+	margin:0 7px 0 0;
+}
+
+.top-wrapper p {
+	display: inline-block;
+  background-color: rgb(179, 81, 12);
+  padding: 10px 30px;
+  color: cornsilk;
+  border-radius: 4px;
+  font-family: Helvetica;
+  font-weight: bold;
+  transition: all 0.4s;
+	margin:12px 0 150px 0;
+}
+
+.top-wrapper p:hover {
+	 background-color: rgb(148, 68, 11);
+	 color: cornsilk;
+	 cursor: pointer;
+}
+
+.section-one {
+	width: 80%;
+	margin: 0 auto;
+	background-color: #FCFFEB;
+}
 
 .coffee-one{
-    height: 730px;
     padding-top: 30px;
-
 }
 
 .heading{
     text-align: center;
-    width: 820px;
-    padding-left:257px;
     margin-bottom: 50px;
 }
 
 .heading h3{
 	font-family: 'Yeseva One', cursive;
-
 }
 
 .heading p{
@@ -146,27 +199,45 @@ nav li:hover {
     line-height: 20px;
 }
 
-.image{
-    margin-left: 240px;
+.section-one .image {
+	display: flex;
+	flex-direction:row;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .image-content img{
-    height: 400px;
-    width: auto;
-    margin-bottom: 0;
+    display: none;
 }
 
-.image-content{
-    float: left;
-    margin-left: 20px;
+.section-one .image {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.image-group {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.image-group img {
+	flex: auto;
+	width:40%;
+	margin:0 10px 0 10px;
+}
+
+.image-content {
+	flex: auto;
+	width: 25%;
+	margin:0 10px;
 }
 
 .image-one p{
     text-align: center;
     font-weight: bold;
-    background-color: rgb(255, 241, 232);
-    color: rgb(26, 26, 26);
-    margin-top: 0px;
+    border:2px solid rgb(179, 81, 12);
+    color: rgb(179, 81, 12);
+    margin-top: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
     font-family: 'Yeseva One', cursive;
@@ -175,86 +246,30 @@ nav li:hover {
 }
 
 .image-one p:hover{
+		cursor:pointer;
     background-color: rgb(179, 81, 12);
     color: honeydew;
 }
 
-.image-one a{
-    background-color: rgb(255, 247, 220);
-    color: rgb(26, 26, 26);
-    margin-top: 0px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-family: Helvetica;
-}
-
 .section-two{
-    height: 500px;
-    background-color: rgb(255, 247, 220);
+	width: 1170px;
+	margin: 0	auto;
+		background-color: #FCFFEB;
 }
 
-.ngopi-image img{
-    height: 350px;
-    position: relative;
-    margin-left: 80px;
-}
-
-.ngopi-text{
-    position: absolute;
-    margin-right: 140px;
-}
-
-.heading-text{
-    margin-bottom: 40px;
-}
-
-.text-p{
-		font-family: 'Yeseva One', cursive;
-    font-weight: bold;
-}
-
-.heading-text p {
-		font-family:'Rubik', sans-serif;
-}
-
-.button{
-    background-color: rgb(179, 81, 12);
-    padding: 10px 30px;
-    color: cornsilk;
-    border-radius: 4px;
-    font-family: Helvetica;
-    font-weight: bold;
-    transition: all 0.4s;
-}
-
-.button:hover{
-    background-color: rgb(148, 68, 11);;
-    color: cornsilk;
-}
-
-.coffee-content{
-    float: left;
-    margin-left: 40px;
-    margin-top: 75px;
-}
-
-.section-three{
-    height: 400px;
-    width: 100%;
-}
-
-.coffee-three{
-    margin-left: 97px;
-    padding-top: 80px;
+.coffee-two{
+    margin-top: 40px;
+		display: flex;
+		flex-direction: row;
 }
 
 .text{
+		flex: auto;
     background-color: rgb(46, 71, 64);
     color: white;
     height: 250px;
     width: 250px;
-    float: left;
-    margin-left: 25px;
+    margin: 0 25px;
     border-radius: 10px;
     text-align: center;
     line-height: 18px;
@@ -263,13 +278,162 @@ nav li:hover {
 
 .text:hover{
     height: 300px;
-    width: 300px;
     background-color: rgb(179, 81, 12);
+		cursor: pointer;
+}
+
+.text span {
+	font-size: 28px;
+	margin-top: 76px;
 }
 
 .text p{
     opacity: 0.7;
     font-family:'Rubik', sans-serif;
-    margin-top: 100px;
+    margin-top: 24px;
     font-weight: bold;
+		letter-spacing: 0.5px;
+}
+
+footer{
+  background-color:rgb(111, 29, 27);
+	height: 510px;
+}
+
+.signup-msg {
+	text-align: center;
+	padding-top: 100px;
+	font-family: 'Yeseva One', cursive;
+	color:#ffe6a7;
+	margin-bottom: 8px;
+}
+
+.msg-content {
+	margin-top:0;
+	text-align: center;
+	font-family:'Rubik', sans-serif;
+	color:#ffe6a7;
+	margin-bottom: 35px;
+}
+
+.signup-form {
+	width: 70%;
+	margin: 0 auto;
+	color:#ffe6a7;
+	display: flex;
+	flex-wrap:wrap;
+	padding-bottom: 135px;
+}
+
+.form {
+	flex:auto;
+	width: 25%;
+}
+
+.form input {
+	padding: 5px 10px;
+	height: 50px;
+	margin:auto;
+	border-radius: 0;
+	border: 0;
+	box-sizing: border-box;
+	outline: none;
+	transition: all 0.4s;
+}
+
+.form input:focus {
+	border: 2px solid #ffe6a7;
+}
+
+.form p {
+	font-size: 12px;
+	font-family:'Rubik', sans-serif;
+	margin:0 0 5px 0;
+}
+
+.signup-btn {
+	margin: 19px auto 0 auto;
+	font-family:'Rubik', sans-serif;
+	text-align: center;
+	padding:2px 0;
+	box-sizing: border-box;
+	border: 2px solid #ffe6a7;
+	transition: all 0.4s;
+}
+
+.signup-btn p {
+	margin: 0;
+	line-height: 40px;
+}
+
+.signup-btn:hover {
+	background-color: #ffe6a7;
+	color:rgb(111, 29, 27);
+	border: 2px solid #ffe6a7;
+	cursor: pointer;
+}
+
+.signup-btn p {
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+
+.gambar-footer {
+	height: 45px;
+	margin:15px 15px 15px 25px;
+	padding:0;
+	float:left;
+}
+
+footer img {
+	float: left;
+}
+
+.tulisan {
+	font-family: 'Yeseva One', cursive;
+  color:#ffe6a7;
+}
+
+.tulisan h1 {
+	margin-bottom: 3px;
+}
+
+.tulisan p {
+	margin:0;
+}
+
+.footer-logo {
+	width: 20%;
+	float: left;
+}
+.tulisan-contact {
+	float: right;
+}
+
+.footer-socials {
+	float:left;
+	display:flex;
+	flex-direction: row;
+	margin:24px 0 24px 50px;
+}
+
+.footer-socials a {
+	font-size: 24px;
+	line-height: 32px;
+	margin:0 27px 0 0;
+	color: #ffe6a7;
+}
+
+.tulisan-contact li {
+	font-family:'Rubik', sans-serif;
+	font-size:12px;
+	color:#ffe6a7;
+	list-style:none;
+	float:right;
+	margin: 50px 25px 0 0;
+}
+
+li:hover{
+	cursor: pointer;
 }
