@@ -83,15 +83,28 @@
   .signup,.login {
   display: none;
   }
+  .title-bar {
+    font-size:12px;
+  }
+  .top-wrapper h1{
+    width:90%;
+    margin:0 auto;
+    margin-bottom:10px;
+  }
+  .top-wrapper h4{
+    width:90%;
+    margin:0 auto;
+    margin-bottom:25px;
+  }
   .menu-icon {
     display: inline-block;
     margin-right:-40px;
     color: rgb(111, 29, 27);
-    font-size: 36px;
+    font-size: 28px;
   }
   .header-right span {
     line-height: 75px;
-    font-size: 36px;
+    font-size: 28px;
     margin-right: 45px;
   }
 
@@ -154,6 +167,12 @@
     height: 100%;
   }
 
+  .signup-msg {
+    width:80%;
+    margin:0 auto;
+    margin-bottom:20px;
+  }
+
   .msg-content {
     width: 80%;
     margin: 0 auto;
@@ -163,7 +182,7 @@
   .signup-form {
   	width: 80%;
   	margin: 0 auto;
-    	padding-bottom: 30px;
+    	padding-bottom: 20px;
   }
 
     .form {
@@ -178,24 +197,44 @@
 
     .footer-logo {
       width: 70%;
-      float:left;
+      float:none;
+    }
+
+    .gambar-footer {
+      margin-top:3px;
     }
 
     .footer-socials {
-      margin-left: 0;
-      float: right;
+       width:100%;
+      margin:30px auto 0 25px;
+     display:flex;
+     flex-direction:row;
+     }
+
+     .footer-socials span {
+       flex:auto;
+       margin:auto;
+     }
+
+    .tulisan-contact {
+      width:100%;
+      margin:0 auto;
     }
 
     .tulisan-contact ul {
+      display:flex;
+      flex-direction:row-reverse;
+      margin-top:30px;
       clear: both;
+      padding:0;
     }
 
     .tulisan-contact li {
-      float: right;
-    }
+      margin:auto;
+     }
 
     footer {
-      height: 770px;
+      height: 820px;
     }
 
 }
